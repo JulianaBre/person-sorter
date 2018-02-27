@@ -21,6 +21,12 @@ public class PersonHandler extends AbstractHandler {
 	private static final String SORT_FIELD = "sortField";
 	private static final String ASCENDING = "ascending";
 
+	/**
+	 * Handler class for a list of Persons.  Configures and starts Jetty server.
+	 * Calls a predefined Json object of people and uses Gson to populate
+	 * a list of Person.  Calls a sort method passing in criteria and returns a
+	 * sorted list.
+	 */
 	@Override
 	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
@@ -37,7 +43,7 @@ public class PersonHandler extends AbstractHandler {
 
 		Iterable<Person> people = getPeople();
 
-		List<Person> sortedPeople = sort(people, sortField, ascending);
+		List<Person> sortedPeople = PersonSort.sort(people, sortField, ascending);
 
 		// Declare response status code
 		response.setStatus(HttpServletResponse.SC_OK);
@@ -48,13 +54,6 @@ public class PersonHandler extends AbstractHandler {
 
 		// Inform jetty that this request has now been handled
 		baseRequest.setHandled(true);
-	}
-
-	// Sort Person List for given criteria
-	static List<Person> sort(Iterable<Person> people, String sortField, String ascending) {
-		PersonSort personSort = new PersonSort(people);
-		return personSort.sort(sortField, ascending);
-
 	}
 
 	private String getContentOptions() {

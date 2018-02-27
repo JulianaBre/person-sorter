@@ -1,4 +1,8 @@
-
+/**
+ * Enum for sortfield values.
+ * @author jbreith
+ *
+ */
 public enum SortFieldEnum {
 	DEFAULT("firstName"),
 	FIRSTNAME("firstName"),

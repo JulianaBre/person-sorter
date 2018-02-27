@@ -12,7 +12,6 @@ import org.junit.runner.notification.Failure;
 
 public class PersonSortTest {
 	private Iterable<Person> people = populatePeopleList();
-	private PersonSort personSort = new PersonSort(people);
 	private String ascending = "true";
 	private String descending = "false";
 	private static final double DELTA = 0;
@@ -23,7 +22,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortFirstNameAsc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.FIRSTNAME.getValue(), ascending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.FIRSTNAME.getValue(), ascending);
 		// then
 		assertEquals("Alfonso", result.get(0).getFirstName());
 	}
@@ -31,7 +30,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortFirstNameDesc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.FIRSTNAME.getValue(), descending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.FIRSTNAME.getValue(), descending);
 		// then
 		assertEquals("Crissy", result.get(0).getFirstName());
 	}
@@ -39,7 +38,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortLastNameAsc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.LASTNAME.getValue(), ascending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.LASTNAME.getValue(), ascending);
 		// then
 		assertEquals("Camel", result.get(0).getLastName());
 	}
@@ -47,7 +46,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortLastNameDesc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.LASTNAME.getValue(), descending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.LASTNAME.getValue(), descending);
 		// then
 		assertEquals("Jones", result.get(0).getLastName());
 	}
@@ -55,7 +54,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortDobAsc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.DOB.getValue(), ascending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.DOB.getValue(), ascending);
 		// then
 		assertEquals(dob3, result.get(0).getDateOfBirth());
 	}
@@ -63,7 +62,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortDobDesc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.DOB.getValue(), descending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.DOB.getValue(), descending);
 		// then
 		assertEquals(dob1, result.get(0).getDateOfBirth());
 	}
@@ -71,7 +70,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortSsnAsc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.SSN.getValue(), ascending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.SSN.getValue(), ascending);
 		// then
 		assertEquals("123", result.get(0).getSsn());
 	}
@@ -79,7 +78,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSorSsnDesc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.SSN.getValue(), descending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.SSN.getValue(), descending);
 		// then
 		assertEquals("789", result.get(0).getSsn());
 	}
@@ -87,7 +86,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortHeightAsc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.HEIGHT.getValue(), ascending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.HEIGHT.getValue(), ascending);
 		// then
 		assertEquals(55.5, result.get(0).getHeightIn(), DELTA);
 	}
@@ -95,7 +94,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortHeightDesc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.HEIGHT.getValue(), descending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.HEIGHT.getValue(), descending);
 		// then
 		assertEquals(70.1, result.get(0).getHeightIn(), DELTA);
 	}
@@ -103,7 +102,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortWeightAsc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.WEIGHT.getValue(), ascending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.WEIGHT.getValue(), ascending);
 		// then
 		assertEquals(120.2, result.get(0).getWeightLb(), DELTA);
 	}
@@ -111,7 +110,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortWeightDesc() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.WEIGHT.getValue(), descending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.WEIGHT.getValue(), descending);
 		// then
 		assertEquals(170.7, result.get(0).getWeightLb(), DELTA);
 	}
@@ -119,7 +118,7 @@ public class PersonSortTest {
 	@Test
 	public void shouldSortDefaultIfNotFound() {
 		// given
-		List<Person> result = personSort.sort(SortFieldEnum.FIRSTNAME.getValue(), ascending);
+		List<Person> result = PersonSort.sort(people, SortFieldEnum.FIRSTNAME.getValue(), ascending);
 		// then
 		assertEquals("Alfonso", result.get(0).getFirstName());
 	}
