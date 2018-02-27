@@ -1,0 +1,74 @@
+[
+	{
+		"firstName": "Alfonso",
+		"lastName": "Guevara",
+		"heightIn": 60.5,
+		"weightLb": 150.5,
+		"dateOfBirth": "1975-04-29",
+		"ssn": "123-456-7890"
+	},
+	{
+		"firstName": "Norm",
+		"lastName": "Garbanzo",
+		"heightIn": 70.0,
+		"weightLb": 160.5,
+		"dateOfBirth": "1978-01-25",
+	    	"ssn": "223-456-7890"
+	},
+	{
+		"firstName": "Juliana",
+		"lastName": "Breithaupt",
+		"heightIn": 75.75,
+		"weightLb": 170.2,
+		"dateOfBirth": "1975-02-12",
+		"ssn": "323-456-7890"
+	},
+	{
+		"firstName": "Cherie",
+		"lastName": "Banana",
+		"heightIn": 80.8,
+		"weightLb": 200.5,
+		"dateOfBirth": "1979-05-30",
+		"ssn": "423-456-7890"
+	},
+	{
+		"firstName": "Swampus",
+		"lastName": "Plumpus",
+		"heightIn": 55.5,
+		"weightLb": 99.5,
+		"dateOfBirth": "1935-01-01",
+		"ssn": "523-456-7890"
+	},
+	{
+		"firstName": "Ricky Bobby",
+		"lastName": "Dog",
+		"heightIn": 54.4,
+		"weightLb": 160.5,
+		"dateOfBirth": "1985-11-12",
+		"ssn": "623-456-7890"
+	},
+	{
+		"firstName": "Loosey",
+		"lastName": "BooBoo",
+		"heightIn": 55.5,
+		"weightLb": 155.5	,
+		"dateOfBirth": "1990-06-06",
+		"ssn": "723-456-7890"
+	},
+	{
+		"firstName": "Angus",
+		"lastName": "Magnus",
+		"heightIn": 44.4,
+		"weightLb": 151.5,
+		"dateOfBirth": "2001-02-21",
+		"ssn": "823-456-7890"
+	},
+	{
+		"firstName": "Beth",
+		"lastName": "FatButt",
+		"heightIn": 12.0,
+		"weightLb": 150.5,
+		"dateOfBirth": "2005-09-15",
+		"ssn": "444-456-7890"
+	}
+]
