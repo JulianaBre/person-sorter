@@ -21,3 +21,4 @@ Choose any option link to see the sort results!
 
 Run the tests with:  
 `java -cp .:../sorter-0.0.1-SNAPSHOT-jar-with-dependencies.jar PersonSortTest`
+
