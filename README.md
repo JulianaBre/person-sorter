@@ -8,7 +8,9 @@ You can get this from HomeBrew:
   
 cd person-sorter  
 run `mvn install`  
-`java -cp .:../sorter-0.0.1-SNAPSHOT-jar-with-dependencies.jar  PersonHandler`
+
+cd  person-sorter/target/classes  
+run `java -cp .:../sorter-0.0.1-SNAPSHOT-jar-with-dependencies.jar  PersonHandler`
 
 Go to:
 `http://localhost:8080/people`
